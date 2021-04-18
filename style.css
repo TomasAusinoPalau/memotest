@@ -1,0 +1,56 @@
+body, html {
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.tablero {
+}
+
+.container-fluid {
+    height: 100%;
+    display: grid;
+
+
+}
+.fila-juego {
+    height: 25vh;
+}
+
+.columna-juego{
+    border: 1px solid black;
+}
+
+.cuadro {
+    opacity: 01;
+    transition: ease 0.2s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.yellow {
+    background-color: #e4d425;
+}
+
+.red {
+    background-color: #e43525;
+}
+
+.blue {
+    background-color: #52bf18;
+}
+
+.pink {
+    background-color: #ec21c0;
+}
+
+.purple {
+    background-color: #9818bf;
+}
+
+.cyan {
+    background-color: aqua;
+}
+
+
