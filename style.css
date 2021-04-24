@@ -22,7 +22,7 @@ body, html {
 }
 
 .cuadro {
-    opacity: 01;
+    opacity: 0;
     transition: ease 0.2s;
     cursor: pointer;
     width: 100%;
@@ -51,6 +51,10 @@ body, html {
 
 .cyan {
     background-color: aqua;
+}
+
+.completo{
+    background: darkgrey;
 }
 
 
