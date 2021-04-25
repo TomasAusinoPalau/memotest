@@ -1,0 +1,31 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "memotest de r/argentinaprograma",
+  "main": "src/script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasAusinoPalau/memotest.git"
+  },
+  "keywords": [
+    "memotest",
+    "js",
+    "cypress",
+    "bootstrap"
+  ],
+  "author": "Tomas Ausino Palau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasAusinoPalau/memotest/issues"
+  },
+  "homepage": "https://github.com/TomasAusinoPalau/memotest#readme",
+  "devDependencies": {
+    "cypress": "^7.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}

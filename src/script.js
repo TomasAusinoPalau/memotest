@@ -1,9 +1,10 @@
 let parejas = [];
 let parejasUsuario = [];
 
-const $cuadros = document.querySelectorAll('.cuadro');
+const $cuadrados = document.querySelectorAll('.cuadro');
 
 const colors = ["yellow", "red", "blue", "pink", "purple", "cyan"];
+const $tablero = document.querySelector(".tablero")
 const colorsRepetidos = colors.concat(colors)
 
 
@@ -23,8 +24,8 @@ function distribuirColores () {
     })
 
     randomColors.forEach((color, index) => {
-        $cuadros[index].classList.add(color);
-        parejas.push($cuadros[index])
+        $cuadrados[index].classList.add(color);
+        parejas.push($cuadrados[index])
     })
 
 
@@ -42,10 +43,9 @@ function desbloquearInputUsuario() {
 
     let cuadradosElegidos = []
 
-    document.querySelectorAll(".cuadro").forEach(function ($cuadro) {
 
 
-        $cuadro.onclick = (e) => {
+        $tablero.onclick = (e) => {
             const $cuadrado = e.target;
             console.log($cuadrado);
 
@@ -53,7 +53,19 @@ function desbloquearInputUsuario() {
 
             cuadradosElegidos.push($cuadrado)
 
+            
+
             if (cuadradosElegidos.length === 2) {
+
+
+                if(cuadradosElegidos[0] === cuadradosElegidos[1]) {
+                    ocultarCuadrado(cuadradosElegidos[0])
+
+                    return desbloquearInputUsuario()
+                }
+                
+                
+                
                 if (cuadradosElegidos[0].className === cuadradosElegidos[1].className) {
                     eliminarCuadrado(cuadradosElegidos[0]);
                     eliminarCuadrado(cuadradosElegidos[1]);
@@ -72,9 +84,7 @@ function desbloquearInputUsuario() {
 
             }
         }
-    })
-
-}
+    }
 
 function eliminarCuadrado($cuadrado) {
     setTimeout(function() {
