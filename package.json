@@ -4,7 +4,8 @@
   "description": "memotest de r/argentinaprograma",
   "main": "src/script.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cy:run": "cypress-run"
   },
   "repository": {
     "type": "git",
