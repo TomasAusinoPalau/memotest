@@ -106,6 +106,7 @@ function iluminarCuadrado($cuadrado) {
 
 function evaluarFinDeJuego() {
     if (parejas.length === parejasUsuario.length) {
+        $tablero.classList.add("oculto");
         console.log("ganaste");
     }
 }

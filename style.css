@@ -7,6 +7,9 @@ body, html {
 .tablero {
 }
 
+.oculto {
+    display: none;
+}
 .container-fluid {
     height: 100%;
     display: grid;
