@@ -6,7 +6,7 @@ const $cuadrados = document.querySelectorAll('.cuadro');
 const colors = ["yellow", "red", "blue", "pink", "purple", "cyan"];
 const $tablero = document.querySelector(".tablero")
 const colorsRepetidos = colors.concat(colors)
-
+let TURNOS_USUARIO = 0;
 
 
 function nuevaPartida () {
@@ -57,7 +57,7 @@ function desbloquearInputUsuario() {
 
             if (cuadradosElegidos.length === 2) {
 
-
+                TURNOS_USUARIO += 1;
                 if(cuadradosElegidos[0] === cuadradosElegidos[1]) {
                     ocultarCuadrado(cuadradosElegidos[0])
 
@@ -108,7 +108,15 @@ function evaluarFinDeJuego() {
     if (parejas.length === parejasUsuario.length) {
         $tablero.classList.add("oculto");
         console.log("ganaste");
+        invocarMensaje()
     }
 }
 
+function invocarMensaje() {
+    const $mensaje = document.querySelector(".mensaje");
+    const $numeroTurnos = document.querySelector(".cantidad-turnos")
+
+    $numeroTurnos.innerText = TURNOS_USUARIO;
+    $mensaje.classList.remove("oculto")
+}
 nuevaPartida();

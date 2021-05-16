@@ -74,8 +74,25 @@ context("Memotest", ( ) => {
 
             cy.get(".cuadro").should('have.length', 0);
 
+           
+        })
+    })
+    describe("finaliza el juego", () => {
+
+        it("debe finalizar el juego",() => {
             cy.get('.tablero').should('not.be.visible')
         })
+        
+        it("debe mostrarse el cuadro de mensaje", () => {
+            cy.get(".mensaje").should('be.visible');
+        })
+
+        // 1 turno de error y 6 de aciertos
+        it("deben ser 7 turnos", () => {
+            cy.get('.cantidad-turnos').should('contain', '7')
+        })
+
+
     })
 
 })
